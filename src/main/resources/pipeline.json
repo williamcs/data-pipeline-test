@@ -1,0 +1,21 @@
+{
+  "name": "pipeline_rule",
+  "source": {
+    "type": "file",
+    "topic": "conversion_event",
+    "format": "csv",
+    "schema": "com.flink.pipeline.model.Conversion",
+    "path": "data/KAG_conversion_data.csv",
+    "logType": "conversion_event"
+  },
+  "trigger": "select * from conversion_event",
+  "sinks": [
+    {
+      "type": "file",
+      "topic": "conversion_event_sink",
+      "format": "csv",
+      "schema": "com.flink.pipeline.model.Conversion",
+      "path": "data/KAG_conversion_data_result.csv"
+    }
+  ]
+}
