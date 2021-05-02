@@ -8,6 +8,7 @@ trait WithFlinkEnv {
 
   lazy val flinkStreamExecutionEnvironment: StreamExecutionEnvironment = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
+    env.setParallelism(1)
     env
   }
 

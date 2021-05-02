@@ -3,6 +3,7 @@ package com.flink.pipeline.job.impl
 import com.flink.pipeline.constant.Constants.{CONST_AVRO, CONST_CSV, CONST_FILE, CONST_JSON, CONST_KAFKA, CONST_LOG_TYPE}
 import com.flink.pipeline.job.{PipelineJob, PipelineJobContext}
 import com.flink.pipeline.model.Conversion
+import com.flink.pipeline.sink.CSVSink
 import com.flink.pipeline.source.CSVSource
 import org.apache.flink.streaming.api.scala.createTypeInformation
 import org.apache.flink.table.api.{EnvironmentSettings, Table}
@@ -87,6 +88,8 @@ private[job] class PipelineJobImpl(jobCtx: PipelineJobContext) extends PipelineJ
         case "com.flink.pipeline.model.Conversion" => {
           val sinkStream = queryTable.toAppendStream[Conversion]
           sinkStream.print()
+
+          sinkStream.addSink(new CSVSink(sink.path))
         }
         case _ => {
           println("to be implemented...")

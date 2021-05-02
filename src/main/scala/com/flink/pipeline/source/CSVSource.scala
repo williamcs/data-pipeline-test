@@ -44,7 +44,7 @@ class CSVSource(csvFilePath: String) extends SourceFunction[Conversion] {
 
       sourceContext.collect(conversion)
 
-      Thread.sleep(1000)
+      Thread.sleep(100)
     }
   }
 }
