@@ -15,7 +15,7 @@ class ConfigSourceFunction extends SourceFunction[String] {
       }
     }
 
-    Thread.sleep(20 * 1000)
+    Thread.sleep(60 * 1000)
   }
 
   override def cancel(): Unit = {

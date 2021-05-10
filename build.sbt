@@ -4,7 +4,7 @@ version := "0.1"
 
 scalaVersion := "2.12.13"
 
-val flinkVersion = "1.12.2"
+val flinkVersion = "1.13.0"
 val json4sJacksonVersion = "3.7.0-M6"
 val asyncHttpClientVersion = "2.12.1"
 val scalaCSVVersion = "1.3.7"

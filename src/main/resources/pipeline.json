@@ -8,7 +8,7 @@
     "path": "data/KAG_conversion_data.csv",
     "logType": "conversion_event"
   },
-  "trigger": "select * from conversion_event",
+  "trigger": "select * from conversion_event where gender = 'F'",
   "sinks": [
     {
       "type": "file",
