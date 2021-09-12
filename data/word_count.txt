@@ -1,0 +1,5 @@
+We added basic Dotty support in the IntelliJ Scala plugin a long time ago, right after the announcement of Dotty.
+ However, for a long time Dotty has been a dark horse, and aiming at a moving target hadn’t been easy.
+ So it was reasonable to put that task on the back-burner and focus on Scala 2 for a while.
+ Now that Dotty is finally destined to become Scala 3 and the language features are getting more stable,
+ we have started to work on a full-fledged Scala 3 support.
